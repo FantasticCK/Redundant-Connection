@@ -12,7 +12,7 @@ class Solution {
         int n = edges.length;
         if (n == 0) return new int[0];
 
-        DSU uf = new DSU(n);
+        DSU uf = new DSU(n+1);
         int[] res = new int[2];
         for (int i = 0; i < n; i++) {
             int[] edge = edges[i];
@@ -31,7 +31,6 @@ class Solution {
         int[] size;
 
         DSU(int n) {
-            n++;
             parents = new int[n];
             size = new int[n];
             for (int i = 0; i < n; i++) {
